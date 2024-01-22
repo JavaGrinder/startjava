@@ -8,28 +8,28 @@ public class VariableNamesTheme {
         System.out.println("цифра = " + digit);
 
         //Сумма чисел
-        int sumNumbers = 5;
-        System.out.println("сумма чисел = " + sumNumbers);
+        int sumNums = 5;
+        System.out.println("сумма чисел = " + sumNums);
 
         //Произведение цифр
         int productDigits = 6;
         System.out.println("произведение цифр = " + productDigits);
 
         //Максимальное число
-        int maxNumber = 2147483647;
-        System.out.println("максимальное число = " + maxNumber);
+        int maxNum = 2147483647;
+        System.out.println("максимальное число = " + maxNum);
 
         //Количество десятков
         int quantityTens = 7;
         System.out.println("количество десятков = " + quantityTens);
 
         //Вес собаки
-        byte weightDog = 15;
-        System.out.println("вес собаки = " + weightDog + " килограмм");
+        byte dogWeight = 15;
+        System.out.println("вес собаки = " + dogWeight + " килограмм");
 
         //Исходное число
-        int sourceNumber = 0;
-        System.out.println("исходное число = " + sourceNumber);
+        int sourceNum = 0;
+        System.out.println("исходное число = " + sourceNum);
 
         //Процент по вкладу
         float interestDeposit = 14.5F;
@@ -40,24 +40,24 @@ public class VariableNamesTheme {
         System.out.println(ampersand);
 
         //Код ошибки
-        int codeError = 404;
-        System.out.println("код ошибки = " + codeError);
+        int errorCode = 404;
+        System.out.println("код ошибки = " + errorCode);
 
         //Тип сообщения
         byte typeMessage = 2;
         System.out.println("тип сообщения = " + typeMessage);
 
         //Число нулей
-        byte quantityNulls = 10;
-        System.out.println("число нулей = " + quantityNulls);
+        byte quantityZeros = 10;
+        System.out.println("число нулей = " + quantityZeros);
 
         //Уникальное число
-        int uniqueNumber = 1;
-        System.out.println("уникальное число = " + uniqueNumber);
+        int uniqueNum = 1;
+        System.out.println("уникальное число = " + uniqueNum);
 
         //Случайное число
-        int randomNumber = 11;
-        System.out.println("случайное число = " + randomNumber);
+        int randomNum = 11;
+        System.out.println("случайное число = " + randomNum);
 
         //Математическое выражение
         int mathExpression = 7;
@@ -88,16 +88,16 @@ public class VariableNamesTheme {
         System.out.println("дата начала = " + startDate);
 
         //Окончание диапазона
-        int rangeEnd = 10;
-        System.out.println("окончание диапазона = " + rangeEnd);
+        int endRange = 10;
+        System.out.println("окончание диапазона = " + endRange);
 
         //Полное имя работника месяца
         byte fullNameEmployeeMonth = 1;
         System.out.println("полное имя работника месяца = " + fullNameEmployeeMonth);
 
         //Заголовок электронной книги
-        byte eBookTitle = 4;
-        System.out.println("заголовок электронной книги = " + eBookTitle);
+        byte ebookTitle = 4;
+        System.out.println("заголовок электронной книги = " + ebookTitle);
 
         //Размер
         float size = 146.5F;
@@ -112,19 +112,18 @@ public class VariableNamesTheme {
         System.out.println("счетчик = " + counter);
 
         //Путь до файла
-        char filePath = '5';
-        System.out.println("путь до файла = " + filePath);
+        char pathToFile = '5';
+        System.out.println("путь до файла = " + pathToFile);
 
         //Количество чисел в каждой строке
         int quantityNumsEachLine = 101;
         System.out.println("количество чисел в каждой строке = " + quantityNumsEachLine);
 
-        System.out.println("");
-        System.out.println("2. Boolean-переменные");
+        System.out.println('\n' + "2. Boolean-переменные");
 
         //Сотни равны?
-        boolean isHundredsEqual = true;
-        System.out.println("сотни равны? = " + isHundredsEqual);
+        boolean isEqualHundreds = true;
+        System.out.println("сотни равны? = " + isEqualHundreds);
 
         //Компьютер включен?
         boolean isPcOn = true;
@@ -155,11 +154,10 @@ public class VariableNamesTheme {
         System.out.println("электронная почта действительная? = " + isEmailValid);
 
         //Имеются уникальные строки?
-        boolean isUniqueStrings = false;
-        System.out.println("имеются уникальные строки? = " + isUniqueStrings);
+        boolean hasUniqueStrings = false;
+        System.out.println("имеются уникальные строки? = " + hasUniqueStrings);
 
-        System.out.println("");
-        System.out.println("3. Аббревиатуры");
+        System.out.println('\n' + "3. Аббревиатуры");
 
         //Старый universally unique identifier
         byte oldUuid = 1;
@@ -170,8 +168,8 @@ public class VariableNamesTheme {
         System.out.println("производитель оперативной памяти = " + ramMaker);
 
         //Емкость жесткого диска
-        int spaceHdd = 512;
-        System.out.println("емкость жесткого диска = " + spaceHdd + " GB");
+        int hddSpace = 512;
+        System.out.println("емкость жесткого диска = " + hddSpace + " GB");
 
         //Протокол передачи гипертекста
         byte http = 2;
@@ -186,9 +184,8 @@ public class VariableNamesTheme {
         System.out.println("новый идентификатор клиента = " + newClientId);
 
         //Кодировка american standard code for information interchange
-        char codAscii = 'a';
-        System.out.println("кодировка american standard code for information interchange = " + codAscii);
-
-
+        char codeAscii = 'a';
+        System.out.println("кодировка american standard code for information interchange = "
+                + codeAscii);
     }
 }
