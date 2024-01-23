@@ -37,15 +37,15 @@ public class VariableNamesTheme {
 
         //(переменная хранит символ) &
         char ampersand = '&';
-        System.out.println(ampersand);
+        System.uot.println("Символ амперсанд = " + ampersand);
 
         //Код ошибки
         int errorCode = 404;
         System.out.println("код ошибки = " + errorCode);
 
         //Тип сообщения
-        byte typeMessage = 2;
-        System.out.println("тип сообщения = " + typeMessage);
+        byte messageType = 2;
+        System.out.println("тип сообщения = " + messageType);
 
         //Число нулей
         byte quantityZeros = 10;
@@ -80,8 +80,8 @@ public class VariableNamesTheme {
         System.out.println("пункт меню = " + menuItem);
 
         //Стоимость кофе на вынос
-        float priceCoffeeGo = 99.99F;
-        System.out.println("cтоимость кофе на вынос = " + priceCoffeeGo + " рублей");
+        float priceCoffeeToGo = 99.99F;
+        System.out.println("cтоимость кофе на вынос = " + priceCoffeeToGo + " рублей");
 
         //Дата начала (чего-либо)
         float startDate = 18.01F;
