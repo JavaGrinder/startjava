@@ -116,9 +116,9 @@ public class VariablesTheme {
         System.out.println("Перестановка с помощью побитовой операции\n");
         System.out.println("Исходные значения: a= " + a + ", b = " + b);
         System.out.print("Новые значения: a = ");
-        System.out.print(a^7);
+        System.out.print((a^a)^b);
         System.out.print(", b = ");
-        System.out.print(b^7);
+        System.out.print((b^b)^a);
 
         System.out.println("\n6. Вывод символов и их кодов\n");
 
@@ -128,17 +128,11 @@ public class VariablesTheme {
         char verticalBar = '|';
         char tilde = '~';
 
-        int codeDollar = (int) dollar;
-        int codeAsterisk = (int) asterisk;
-        int codeAtSign = (int) atSign;
-        int codeVerticalBar = (int) verticalBar;
-        int codeTilde = (int) tilde;
-
-        System.out.println(codeDollar + " " + dollar);
-        System.out.println(codeAsterisk + " " + asterisk);
-        System.out.println(codeAtSign + " " + atSign);
-        System.out.println(codeVerticalBar + " " + verticalBar);
-        System.out.println(codeTilde + " " + tilde);
+        System.out.println((int) dollar + " " + dollar);
+        System.out.println((int) asterisk + " " + asterisk);
+        System.out.println((int) atSign + " " + atSign);
+        System.out.println((int) verticalBar + " " + verticalBar);
+        System.out.println((int) tilde + " " + tilde);
 
         System.out.println("\n7. Вывод в консоль ASCII-арт Дюка\n");
 
@@ -150,8 +144,8 @@ public class VariablesTheme {
 
         System.out.println("    " + slash + backslash + '\n' + 
                 "   " + slash + "  " + backslash + '\n' + 
-                "  " + slash + underscore + leftParenthesis + " " + rightParenthesis + backslash + 
-                '\n' + 
+                "  " + slash + underscore + leftParenthesis + " " + rightParenthesis + 
+                backslash + '\n' + 
                 " " + slash + "      " + backslash + '\n' + 
                 slash + underscore + underscore + underscore + underscore + slash + backslash + 
                 underscore + underscore + backslash);
@@ -175,9 +169,8 @@ public class VariablesTheme {
                            
         int time = 86399;
         int hh = time / 3600;
-        int remainderMin = time % 3600;
         int mm = (time % 3600) / 60;
-        int ss = (time % 3600) % 60;
+        int ss = mm % 60;
         
         System.out.println(hh + ":" + mm + ":" + ss);
     }

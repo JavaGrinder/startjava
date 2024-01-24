@@ -37,7 +37,7 @@ public class VariableNamesTheme {
 
         //(переменная хранит символ) &
         char ampersand = '&';
-        System.uot.println("Символ амперсанд = " + ampersand);
+        System.out.println("Символ амперсанд = " + ampersand);
 
         //Код ошибки
         int errorCode = 404;
