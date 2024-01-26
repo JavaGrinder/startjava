@@ -111,14 +111,17 @@ public class VariablesTheme {
 
         System.out.println("Перестановка с помощью арифметических операций\n");
         System.out.println("Исходные значения: a = " + a + ", b = " + b);
-        System.out.println("Новые значения a= " + (a - (a - b)) + ", b= " + (b + (a - b)) + '\n');
+        a = a + b;
+        b = a - b;
+        a = a - b;
+        System.out.println("Новые значения a= " + a + ", b= " + b + '\n');
 
         System.out.println("Перестановка с помощью побитовой операции\n");
         System.out.println("Исходные значения: a= " + a + ", b = " + b);
-        System.out.print("Новые значения: a = ");
-        System.out.print((a^a)^b);
-        System.out.print(", b = ");
-        System.out.print((b^b)^a);
+        a = a ^ b;
+        b = a ^ b;
+        a = b ^ a;
+        System.out.println("Новые значения: a = " + a + ", b = " + b);
 
         System.out.println("\n6. Вывод символов и их кодов\n");
 
@@ -155,7 +158,7 @@ public class VariablesTheme {
         int num = 123;
         int hundreds = num / 100;
         int tens = (num % 100) / 10;
-        int ones = (num % 100) % 10;
+        int ones = num % 10;
         int sumDigits = hundreds + tens + ones;
         int productDigits = hundreds * tens * ones;
         System.out.println("Число " + num + " содержит:\n" + 
