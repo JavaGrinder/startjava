@@ -111,16 +111,16 @@ public class VariablesTheme {
 
         System.out.println("Перестановка с помощью арифметических операций\n");
         System.out.println("Исходные значения: a = " + a + ", b = " + b);
-        a = a + b;
+        a += b;
         b = a - b;
-        a = a - b;
+        a -= b;
         System.out.println("Новые значения a= " + a + ", b= " + b + '\n');
 
         System.out.println("Перестановка с помощью побитовой операции\n");
         System.out.println("Исходные значения: a= " + a + ", b = " + b);
-        a = a ^ b;
-        b = a ^ b;
-        a = b ^ a;
+        a ^= b;
+        b ^= a;
+        a ^= b;
         System.out.println("Новые значения: a = " + a + ", b = " + b);
 
         System.out.println("\n6. Вывод символов и их кодов\n");

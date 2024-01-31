@@ -4,31 +4,30 @@ public class IfElseStatementTheme {
         System.out.println("1. Перевод псевдокода на язык Java\n");
 
         boolean maleGender = true;
-        if (!maleGender == false) {
+        if (!maleGender) {
             System.out.println("пол мужской");
         } else {
             System.out.println("пол женский");
         }
 
         int age = 19;
-        if ( age > 18) {
+        if (age > 18) {
             System.out.println("совершеннолетний");
         } else {
             System.out.println("несовершеннолетний");
         }
 
-        float growth = 1.5f;
-        if (growth < 1.8) {
+        float height = 1.5f;
+        if (height < 1.8) {
             System.out.println("рост невысокий");
         } else {
             System.out.println("рост высокий");
         }
 
         String name = "Mihail";
-        char firstLetterOfName = name.charAt(0);
-        if (firstLetterOfName == 'M') {
+        if (name.charAt(0) == 'M') {
             System.out.println("Имя начинается с буквы \"M\"");
-        } else if (firstLetterOfName == 'I') {
+        } else if (name.charAt(0) == 'I') {
             System.out.println("Имя начинается с буквы \"I\"");
         } else {
             System.out.println("Имя не удовлетворяет условиям");
@@ -38,6 +37,7 @@ public class IfElseStatementTheme {
 
         int a = 2;
         int b = 3;
+
         if (a < b) {
             System.out.println("Число " + a + " меньше " + b);
         } else if (a > b) {
@@ -54,18 +54,15 @@ public class IfElseStatementTheme {
         if (c != 0) {
             if (c % 2 == 0) {
                 System.out.print(" чётное");
-                }
-            else {
+            } else {
                 System.out.print(" нечетное");
             }
             if (c > 0) {
                 System.out.print(" и положительное\n");
-                }
-            else {
+            } else {
                 System.out.print(" и отрицательное\n");
             }
-        }
-        else {
+        } else {
             System.out.println(" равно нулю");
         }
 
@@ -80,13 +77,14 @@ public class IfElseStatementTheme {
                 (num1 % 10) == (num2 % 10)) {
             if ((num1 / 100) == (num2 / 100)) {
                 System.out.println("цифра " + num1 / 100 + " совпадает в сотнях");
-            } if (((num1 % 100) / 10 ) == ((num2 % 100) / 10)) {
+            }
+            if (((num1 % 100) / 10 ) == ((num2 % 100) / 10)) {
                 System.out.println("цифра " + ((num1 % 100) / 10 ) + " совпадает в десятках");
-            } if ((num1 % 10 ) == (num2 % 10)) {
+            } 
+            if ((num1 % 10 ) == (num2 % 10)) {
                 System.out.println("цифра " + (num1 % 10) + " совпадает в единицах");
-            }   
-        }
-        else {
+            }
+        } else {
             System.out.println("цифры в разрядах чисел разные");
         }
 
@@ -106,13 +104,12 @@ public class IfElseStatementTheme {
         System.out.println("\n6. Подсчет суммы вклада и начисленных банком %\n");
 
         double deposit = 301_000;
-        double sumPercent;
-        if (deposit > 300_000) {
-            sumPercent = deposit * 0.1;
-        } else if (deposit > 100_000) {
-             sumPercent = deposit * 0.07;
-        } else { 
-             sumPercent = deposit * 0.05;
+        double sumPercent = 30_100;
+        
+        if (deposit < 300_000 && deposit >= 100_000) {
+            sumPercent = deposit * 0.07;
+        } else if (deposit < 100_000) { 
+            sumPercent = deposit * 0.05;
         }
 
         System.out.println("Сумма вклада " + deposit + " руб.");
@@ -123,32 +120,29 @@ public class IfElseStatementTheme {
 
         int historyGrade = 59;
         int programmingGrade = 92;
-        System.out.println("Средний % по предметам " + (((double)historyGrade) +
-            ((double)programmingGrade)) / 2);
+        int historyScore = 2;
+        int programmingScore = 2;
         
         if (historyGrade > 91) {
-            historyGrade = 5;
+            historyScore = 5;
         } else if (historyGrade > 73) {
-            historyGrade = 4;
+            historyScore = 4;
         } else if (historyGrade > 60) {
-            historyGrade = 3;
-        } else {
-            historyGrade = 2;
+            historyScore = 3;
         }
-        System.out.println("История " + historyGrade);
-
+        
         if (programmingGrade > 91) {
-            programmingGrade = 5;
+            programmingScore = 5;
         } else if (programmingGrade > 73) {
-            programmingGrade = 4;
+            programmingScore = 4;
         } else if (programmingGrade > 60) {
-            programmingGrade = 3;
-        } else {
-            programmingGrade = 2;
+            programmingScore = 3;
         }
-        System.out.println("Программирование " + programmingGrade);
-        System.out.println("Средний балл по предметам " + (((double)historyGrade) + 
-            ((double)programmingGrade)) / 2);
+        System.out.println( "История " + historyScore + " Программирование " + programmingScore);
+        System.out.println("Средний % по предметам " + (((double) historyGrade) +
+            ((double) programmingGrade)) / 2);
+        System.out.println("Средний балл по предметам " + (((double) historyScore) + 
+            ((double) programmingScore)) / 2);
 
         System.out.println("\n8. Расчёт годовой прибыли\n");
 
@@ -162,6 +156,5 @@ public class IfElseStatementTheme {
         } else {
             System.out.println("Прибыль за год: " + annualProfit + " руб.");
         }
-
     }
 }
