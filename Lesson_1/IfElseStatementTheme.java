@@ -24,14 +24,14 @@ public class IfElseStatementTheme {
             System.out.println("рост высокий");
         }
 
-        String name = "Mihail";
-        if (name.charAt(0) == 'M') {
+        if ("Mihail".charAt(0) == 'M') {
             System.out.println("Имя начинается с буквы \"M\"");
-        } else if (name.charAt(0) == 'I') {
+        } else if ("Mihail".charAt(0) == 'I') {
             System.out.println("Имя начинается с буквы \"I\"");
         } else {
             System.out.println("Имя не удовлетворяет условиям");
         }
+
 
         System.out.println("\n2. Поиск большего числа\n");
 
@@ -73,16 +73,22 @@ public class IfElseStatementTheme {
 
         System.out.println("Исходные числа " + num1 + " и " + num2);
 
-        if ((num1 / 100) == (num2 / 100) || ((num1 % 100) / 10 ) == ((num2 % 100) / 10) ||
-                (num1 % 10) == (num2 % 10)) {
-            if ((num1 / 100) == (num2 / 100)) {
-                System.out.println("цифра " + num1 / 100 + " совпадает в сотнях");
+        int ones1 = num1 % 100;
+        int ones2 = num2 % 100;
+        int tens1 = ones1 / 10;
+        int tens2 = ones2 / 10;
+        int hundreds1 = num1 / 100;
+        int hundreds2 = num2 / 100;
+        
+        if (ones1 == ones2 || tens1 == tens2 || hundreds1 == hundreds2) {
+            if (hundreds1 == hundreds2) {
+                System.out.println("цифра " + hundreds1 + " совпадает в сотнях");
             }
-            if (((num1 % 100) / 10 ) == ((num2 % 100) / 10)) {
-                System.out.println("цифра " + ((num1 % 100) / 10 ) + " совпадает в десятках");
+            if (tens1 == tens2) {
+                System.out.println("цифра " + tens1 + " совпадает в десятках");
             } 
-            if ((num1 % 10 ) == (num2 % 10)) {
-                System.out.println("цифра " + (num1 % 10) + " совпадает в единицах");
+            if (ones1 == ones2) {
+                System.out.println("цифра " + ones1 + " совпадает в единицах");
             }
         } else {
             System.out.println("цифры в разрядах чисел разные");
@@ -104,24 +110,22 @@ public class IfElseStatementTheme {
         System.out.println("\n6. Подсчет суммы вклада и начисленных банком %\n");
 
         double deposit = 301_000;
-        double sumPercent = 30_100;
+        double percent = 0.1;
         
-        if (deposit < 300_000 && deposit >= 100_000) {
-            sumPercent = deposit * 0.07;
+        if (deposit >= 100_000 && deposit < 300_000) {
+            percent = 0.07;
         } else if (deposit < 100_000) { 
-            sumPercent = deposit * 0.05;
+            percent = 0.05;
         }
 
         System.out.println("Сумма вклада " + deposit + " руб.");
-        System.out.println("Сумма начисленного % " + sumPercent + " руб.");
-        System.out.println("Итоговая сумма с % " + (deposit + sumPercent) + " руб.");
+        System.out.println("Сумма начисленного % " + (deposit * percent) + " руб.");
+        System.out.println("Итоговая сумма с % " + (deposit + deposit * percent) + " руб.");
 
         System.out.println("\n7. Определение оценки по предметам\n");
 
         int historyGrade = 59;
-        int programmingGrade = 92;
         int historyScore = 2;
-        int programmingScore = 2;
         
         if (historyGrade > 91) {
             historyScore = 5;
@@ -131,6 +135,9 @@ public class IfElseStatementTheme {
             historyScore = 3;
         }
         
+        int programmingGrade = 92;
+        int programmingScore = 2;
+
         if (programmingGrade > 91) {
             programmingScore = 5;
         } else if (programmingGrade > 73) {
@@ -139,10 +146,8 @@ public class IfElseStatementTheme {
             programmingScore = 3;
         }
         System.out.println( "История " + historyScore + " Программирование " + programmingScore);
-        System.out.println("Средний % по предметам " + (((double) historyGrade) +
-            ((double) programmingGrade)) / 2);
-        System.out.println("Средний балл по предметам " + (((double) historyScore) + 
-            ((double) programmingScore)) / 2);
+        System.out.println("Средний % по предметам " + (historyGrade + programmingGrade) / 2f);
+        System.out.println("Средний балл по предметам " + (historyScore + programmingScore) / 2f);
 
         System.out.println("\n8. Расчёт годовой прибыли\n");
 
