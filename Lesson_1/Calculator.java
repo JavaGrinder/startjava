@@ -1,7 +1,6 @@
 public class Calculator {
     
     public static void main(String[] args) {
-        
         int a = 2;
         int b = 8;
         char sign = '^';
