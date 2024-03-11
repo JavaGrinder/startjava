@@ -1,10 +1,10 @@
 public class Wolf {
 
-    public String gender;
-    public String name;
-    public float weight;
-    public int age;
-    public String coloring;
+    private String gender;
+    private String name;
+    private float weight;
+    private int age;
+    private String coloring;
 
     public String getGender() {
         return gender;
